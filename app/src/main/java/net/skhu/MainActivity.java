@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -36,6 +37,14 @@ public class MainActivity extends AppCompatActivity {
             return true;
         } else if(id == R.id.action_buttons){
             Intent intent = new Intent(this, ButtonsActivity.class);
+            startActivity(intent);
+            return true;
+        } else if(id == R.id.action_checkboxes){
+            Intent intent = new Intent(this, CheckboxesActivity.class);
+            startActivity(intent);
+            return true;
+        } else if(id == R.id.action_spinners){
+            Intent intent = new Intent(this, SpinnersActivity.class);
             startActivity(intent);
             return true;
         }

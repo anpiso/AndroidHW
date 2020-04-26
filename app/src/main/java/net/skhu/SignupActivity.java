@@ -2,6 +2,7 @@ package net.skhu;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,6 +20,10 @@ public class SignupActivity extends AppCompatActivity {
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                Intent intent = new Intent(SignupActivity.this, MemoActivity.class);
+                startActivity(intent);
+
                 EditText editText_loginId = (EditText)findViewById(R.id.editText_loginId);
                 String loginId = editText_loginId.getText().toString();
                 if(isEmptyOrWhiteSpace(loginId)){
@@ -42,6 +47,8 @@ public class SignupActivity extends AppCompatActivity {
 
                 String msg = "회원가입 성공 :" + loginId + " " + email;
                 Toast.makeText(SignupActivity.this, msg, Toast.LENGTH_LONG).show();
+
+
             }
         };
         button.setOnClickListener(listener);

@@ -15,6 +15,13 @@ public class MemoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_memo);
 
+        final EditText editText_title = findViewById(R.id.editText_title);
+        editText_title.setText("공지사항입니다.");
+
+        final EditText editText_content = findViewById(R.id.editText_content);
+        editText_content.setText("4주차에 단답식 퀴즈 봅니다.");
+
+
         Button button = (Button)findViewById(R.id.btnSave);
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
